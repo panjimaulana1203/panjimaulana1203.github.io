@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tama Sub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: flex 0.5s ease, filter 0.3s ease;
+            position: relative;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* Sisi Portofolio */
+        .portfolio {
+            background-color: #1a1a1a; /* Hitam Elegan */
+            border-right: 2px solid #333;
+        }
+
+        /* Sisi 31Reconnect */
+        .reconnect {
+            background-color: #2c3e50; /* Biru Gelap Profesional */
+        }
+
+        .side:hover {
+            flex: 1.5;
+            filter: brightness(1.2);
+        }
+
+        .side h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .side p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        /* Garis Tengah */
+        .divider {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* Responsif untuk Mobile */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .side:hover {
+                flex: 1;
+            }
+            .divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="divider">OR</div>
+
+    <a href="https://portofolio.tamasub.com" class="side portfolio">
+        <div class="icon">💼</div>
+        <h1>Portofolio</h1>
+        <p>Lihat karya dan proyek saya</p>
+    </a>
+
+    <a href="https://31reconnect.tamasub.com" class="side reconnect">
+        <div class="icon">🔄</div>
+        <h1>31Reconnect</h1>
+        <p>Masuk ke platform komunitas</p>
+    </a>
+
+</body>
+</html>
